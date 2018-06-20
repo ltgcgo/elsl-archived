@@ -1,4 +1,0 @@
-== elsl ==
-Rewritten ELSL for further and advanced development.
-
-Get started? Go to <a href="/guide">this page</a>!
