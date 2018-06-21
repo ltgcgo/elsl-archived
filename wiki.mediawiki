@@ -5,7 +5,7 @@
 ** [[wiki/ext|ext]]
 *** [[wiki/map|map]]
 ** [[wiki/stat|stat]]
-*** [[wiki/ess|ess
+*** [[wiki/ess|ess]]
 *** csv
 *** stat2d
 ** styler
