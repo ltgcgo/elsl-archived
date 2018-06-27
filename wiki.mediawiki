@@ -3,14 +3,19 @@
 == Modules ==
 * elsl
 ** [[wiki/math|math]]
+*** [[wiki/math/sim|simulated_math(sim)]]
+**** [[wiki/math/sim#dec|Decimals]]
+**** [[wiki/math/sim#frc|Fraction Numbers]]
 ** [[wiki/ext|ext]]
-*** [[wiki/map|map]]
+*** [[wiki/ext/map|map]]
+*** [[wiki/ext/fes|filtered_element_selector(fes)]]
+*** [[wiki/ext/array|array]]
+*** [[wiki/ext/pdc|pre-defined_constants]]
 ** [[wiki/stat|stat]]
-*** [[wiki/ess|ess]]
-*** csv
-*** stat2d
-** styler
-*** notes
-*** buttons
-** sitebuild
-*** easybook
+*** [[wiki/stat/ess|extended_spreadsheet(ess)]]
+*** [[wiki/stat/dbs|database_spreadsheet(dbs)]]
+*** [[wiki/stat/csv|csv]]
+*** [[wiki/stat/stat2d|stat2d]]
+** [[wiki/styler|styler]]
+*** [[wiki/styler/notes|notes]]
+*** [[wiki/styler/buttons|buttons]]
