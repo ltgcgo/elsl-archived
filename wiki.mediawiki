@@ -13,6 +13,7 @@
 *** [[wiki/ext/fes|filtered_element_selector(fes)]]
 *** [[wiki/ext/array|array]]
 *** [[wiki/ext/pdc|pre-defined_value(pdv)]]
+*** [[wiki/ext/otr|object_type_recognizer(otr)]]
 *** [[wiki/ext/sqp|string_quick_parse(sqp)]]
 ** [[wiki/stat|stat]]
 *** [[wiki/stat/ess|extended_spreadsheet(ess)]]
