@@ -1,0 +1,2 @@
+funtion _otr(a) {
+}
