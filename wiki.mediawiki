@@ -12,7 +12,7 @@
 *** [[wiki/ext/map|map]]
 *** [[wiki/ext/fes|filtered_element_selector(fes)]]
 *** [[wiki/ext/array|array]]
-*** [[wiki/ext/pdc|pre-defined_constants]]
+*** [[wiki/ext/pdc|pre-defined_value(pdv)]]
 *** [[wiki/ext/sqp|string_quick_parse(sqp)]]
 ** [[wiki/stat|stat]]
 *** [[wiki/stat/ess|extended_spreadsheet(ess)]]
