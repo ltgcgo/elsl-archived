@@ -1,0 +1,2 @@
+function PreDefinedValue(id, description) {
+}
