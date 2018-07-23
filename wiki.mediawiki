@@ -3,7 +3,7 @@
 == Modules ==
 * elsl
 ** [[wiki/math|math]]
-*** [[wiki/math/sim|simulated_math(sim)]]
+*** [[wiki/math/sim|simulated_decimal_calculation(sdc)]]
 **** [[wiki/math/sim#dec|Decimals]]
 **** [[wiki/math/sim#frc|Fraction Numbers]]
 **** [[wiki/math/sim#log|Logarithm Numbers]]
