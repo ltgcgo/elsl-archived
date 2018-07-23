@@ -1,5 +1,4 @@
 // Updated on 17:21 July 23rd, 2018, from my sololearn codes: https://code.sololearn.com/WgE8SYTs0O2C
-function _main() {
 function Csv() {
     this.state = function () {
         if (this.list) {
@@ -17,7 +16,7 @@ function Csv() {
     this.recordHistory = true;
     this.actionHistory = "";
     this.parse = function (text) {
-        if (_.is.null(text)) {
+        if (text == null || text == undefined) {
             console.error("Empty text to parse.");
             if (this.recordHistory) {
                 let time = new Date();
@@ -160,7 +159,3 @@ function Csv() {
     }
 }
 console.log("Module ELSL Objects Loaded.")
-a = new Csv();
-// Sample CSV Parsing
-a.parse("592170,FL,PINELLAS COUNTY,0,24574.5,0,24574.5,24574.5,40907.7,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n827844,FL,PINELLAS COUNTY,0,38112.3,0,38112.3,38112.3,52710.45,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n876385,FL,PINELLAS COUNTY,0,18312.3,0,18312.3,18312.3,18575.81,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n167630,FL,PINELLAS COUNTY,0,4522.5,0,4522.5,4522.5,4048.11,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n241496,FL,PINELLAS COUNTY,0,1350,0,1350,1350,1430.16,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n780814,FL,PINELLAS COUNTY,0,9770.4,0,9770.4,9770.4,9349.98,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n404309,FL,PINELLAS COUNTY,0,88722,0,88722,88722,155065.65,0,0,0,0,28.122885,-82.770218,Residential,Wood,3\n465875,FL,PINELLAS COUNTY,1297057.5,1297057.5,1297057.5,1297057.5,1297057.5,1577500.79,0,0,0,0,28.0809,-82.7588,Residential,Masonry,1\n791209,FL,PINELLAS COUNTY,173286.9,173286.9,0,0,173286.9,205527.97,0,0,0,0,28.11055,-82.76636,Residential,Wood,4\n322627,FL,PINELLAS COUNTY,1499781.6,1499781.6,0,0,1499781.6,1768782.43,0,0,0,0,28.089415,-82.697411,Residential,Masonry,3\n398149,FL,PINELLAS COUNTY,373488.3,373488.3,0,0,373488.3,596003.67,0,0,0,0,28.06444,-82.77459,Residential,Masonry,1");
-}
