@@ -8,11 +8,11 @@ if (_ecma6_) {
 			this.record = true;
 			this.macro = "";
 			this.state = function () {
-	     	   if (this.list) {
-	     	       return true;
-	     	   } else {
-	     	       return false;
-	     	   }
+				if (this.list) {
+					return true;
+				} else {
+					return false;
+				}
 	    	}
 			this.parse = function (text) {
 		        if (text == null || text == undefined) {
@@ -155,6 +155,7 @@ if (_ecma6_) {
 		    }
 		}
 	}
+	console.log("Module elsl.stat.csv loaded in ECMA6 mode.");
 } else {
 	function Csv() {
 	    this.state = function () {
