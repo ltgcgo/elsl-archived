@@ -1,5 +1,6 @@
 // From my SoloLearn codes: https://code.sololearn.com/WgE8SYTs0O2C
-// For older devices
+// Updated with many bug fixes and improvements. Requires ELSL pre1 to run.
+// Current script: https://github.com/mwashfds/elsl/blob/master/pre1/stat/csv.js
 if (_ecma6_) {
 	function Csv() {
 	    this.state = function () {
