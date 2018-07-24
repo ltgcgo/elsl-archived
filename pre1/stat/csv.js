@@ -41,6 +41,7 @@ if (_ecma6_) {
 	            this.list = obj2;
 	            this.selected = [0,0];
 	        }
+			return this;
 	    }
 	    this.export = function () {
 	        if (this.state() == true) {
@@ -75,10 +76,12 @@ if (_ecma6_) {
 	    }
 	    this.clear = function () {
 	        this.list = null;
+			return this;
 	    }
 	    this.create = function () {
 	        this.list = [[]];
 	        this.selected = [0, 0];
+			return this;
 	    }
 	    this.focus = function (arg1, arg2) {
 	        let from = this.selected;
@@ -134,6 +137,7 @@ if (_ecma6_) {
 	        else {
 	            console.error("Unknown usage.");
 	        }
+			return this;
 	    }
 	}
 	console.log("Module elsl.stat.csv loaded in ECMA6 mode.");
@@ -177,6 +181,7 @@ if (_ecma6_) {
 	            obj2 = null;
 	            donum = null;
 	        }
+			return this;
 	    }
 	    this.export = function () {
 	        if (this.state() == true) {
@@ -215,10 +220,12 @@ if (_ecma6_) {
 	    }
 	    this.clear = function () {
 	        this.list = null;
+			return this;
 	    }
 	    this.create = function () {
 	        this.list = [[]];
 	        this.selected = [0, 0];
+			return this;
 	    }
 	    this.focus = function (arg1, arg2) {
 	        from = this.selected;
@@ -264,6 +271,7 @@ if (_ecma6_) {
             } else {
                 this.list[this.selected[0]][this.selected[1]] = arg1.toString();
             }
+			return this;
 	    }
 	}
 	console.log("Module elsl.stat.csv imported in compatible mode.")
