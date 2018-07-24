@@ -83,20 +83,36 @@ if (_ecma6_) {
 	    this.focus = function (arg1, arg2) {
 	        let from = this.selected;
 	        if (arg1) {
-	            this.selected[0] = arg1;
+				if (arg1 > -1 && arg1 < this.list[0].length) {
+		            this.selected[0] = arg1;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        if (arg2) {
-	            this.selected[1] = arg2;
+				if (arg2 > -1 && arg2 < this.list.length) {
+		            this.selected[1] = arg2;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 	    }
 	    this.unit = function (arg1, arg2) {
 	        let from = this.selected;
 	        if (arg1) {
-	            this.selected[0] += arg1;
+				if ((arg1 + this.selected[0]) > -1 && (arg2 + this.selected[0]) < this.list[0].length) {
+		            this.selected[0] += arg1;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        if (arg2) {
-	            this.selected[1] += arg2;
+				if ((arg2 + this.selected[1]) > -1 && (arg2 + this.selected[1]) < this.list.length) {
+		            this.selected[1] += arg2;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 	    }
@@ -207,10 +223,18 @@ if (_ecma6_) {
 	    this.focus = function (arg1, arg2) {
 	        from = this.selected;
 	        if (arg1) {
-	            this.selected[0] = arg1;
+				if (arg1 > -1 && arg1 < this.list[0].length) {
+		            this.selected[0] = arg1;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        if (arg2) {
-	            this.selected[1] = arg2;
+				if (arg2 > -1 && arg2 < this.list.length) {
+		            this.selected[1] = arg2;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 			from = null;
@@ -218,32 +242,28 @@ if (_ecma6_) {
 	    this.unit = function (arg1, arg2) {
 	        from = this.selected;
 	        if (arg1) {
-	            this.selected[0] += arg1;
+				if ((arg1 + this.selected[0]) > -1 && (arg2 + this.selected[0]) < this.list[0].length) {
+		            this.selected[0] += arg1;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
 	        }
 	        if (arg2) {
-	            this.selected[1] += arg2;
-		}
+				if ((arg2 + this.selected[1]) > -1 && (arg2 + this.selected[1]) < this.list.length) {
+		            this.selected[1] += arg2;
+				} else {
+					console.error("Unable to move outside the sheet.");
+				}
+	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 		from = null;
 	    }
-	    this.set = function (arg1, arg2, arg3) {
-	        if (arg1 && arg2 && arg3) {
-	            this.selected = [arg1, arg2];
-	            if (arg3.__proto__.constructor == String) {
-	                this.list[this.selected[0]][this.selected[1]] = arg3;
-	            } else {
-	                this.list[this.selected[0]][this.selected[1]] = arg3.toString();
-	            }
-	        } else if (arg1 && !(arg2 || arg3)) {
-	            if (arg1.__proto__.constructor == String) {
-	                this.list[this.selected[0]][this.selected[1]] = arg1;
-	            } else {
-	                this.list[this.selected[0]][this.selected[1]] = arg1.toString();
-	            }
-	        }
-	        else {
-	            console.error("Unknown usage.");
-	        }
+	    this.set = function (arg1) {
+        	if (arg1.__proto__.constructor == String) {
+                this.list[this.selected[0]][this.selected[1]] = arg1;
+            } else {
+                this.list[this.selected[0]][this.selected[1]] = arg1.toString();
+            }
 	    }
 	}
 	console.log("Module elsl.stat.csv imported in compatible mode.")
