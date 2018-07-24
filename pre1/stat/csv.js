@@ -8,15 +8,11 @@ if (_ecma6_) {
 	        } else {
 	            return false;
 	        }
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Verified if CSV was created.\n";
-	        }
 	    }
 	    this.selected = [-1, -1];
 	    this.expand = [0, 0];
-	    this.recordHistory = true;
-	    this.actionHistory = "";
+	    this.record = true;
+	    this.macro = "";
 	    this.parse = function (text) {
 	        if (text == null || text == undefined) {
 	            console.error("Empty text to parse.");
@@ -26,10 +22,6 @@ if (_ecma6_) {
 	            }
 	        } else if (this.state() == true) {
 	            console.error("Already had a CSV file! Remove it to parse!");
-	            if (this.recordHistory) {
-	                let time = new Date();
-	                this.actionHistory += "[" + time.toJSON() + "] Parsed text into CSV but failed: Already loaded.\n";
-	            }
 	        }
 	        else {
 	            console.log(text);
@@ -48,10 +40,6 @@ if (_ecma6_) {
 	            console.log("Csv styled.");
 	            this.list = obj2;
 	            this.selected = [0,0];
-	            if (this.recordHistory) {
-	                let time = new Date();
-	                this.actionHistory += "[" + time.toJSON() + "] Parsed text into CSV.\n";
-	            }
 	        }
 	    }
 	    this.export = function () {
@@ -84,25 +72,13 @@ if (_ecma6_) {
 	        else {
 	            console.error("No initialized CSV present!");
 	        }
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Exported CSV into string.\n";
-	        }
 	    }
 	    this.clear = function () {
 	        this.list = null;
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Deleted CSV.\n";
-	        }
 	    }
 	    this.create = function () {
 	        this.list = [[]];
 	        this.selected = [0, 0];
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Created CSV.\n";
-	        }
 	    }
 	    this.focus = function (arg1, arg2) {
 	        let from = this.selected;
@@ -111,14 +87,6 @@ if (_ecma6_) {
 	        }
 	        if (arg2) {
 	            this.selected[1] = arg2;
-	        }
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            if (arg1 || arg2) {
-	                this.actionHistory += "[" + time.toJSON() + "] Moved focus absolutely from " + from + " to " + this.selected + ".\n";
-	            } else {
-	                this.actionHistory += "[" + time.toJSON() + "] Read content inside " + from + " via absolute movement.\n";
-	            }
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 	    }
@@ -129,14 +97,6 @@ if (_ecma6_) {
 	        }
 	        if (arg2) {
 	            this.selected[1] += arg2;
-	        }
-	        if (this.recordHistory) {
-	            let time = new Date();
-	            if (arg1 || arg2) {
-    	            this.actionHistory += "[" + time.toJSON() + "] Moved focus relatively from " + from + " to " + this.selected + ".\n";
-    	        } else {
-	                this.actionHistory += "[" + time.toJSON() + "] Read content inside " + from + " via relative movement.\n";
-	            }
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 	    }
@@ -239,20 +199,10 @@ if (_ecma6_) {
 	    }
 	    this.clear = function () {
 	        this.list = null;
-	        if (this.recordHistory) {
-	            time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Deleted CSV.\n";
-				time = null;
-	        }
 	    }
 	    this.create = function () {
 	        this.list = [[]];
 	        this.selected = [0, 0];
-	        if (this.recordHistory) {
-	        	time = new Date();
-	            this.actionHistory += "[" + time.toJSON() + "] Created CSV.\n";
-				time = null;
-	        }
 	    }
 	    this.focus = function (arg1, arg2) {
 	        from = this.selected;
@@ -261,15 +211,6 @@ if (_ecma6_) {
 	        }
 	        if (arg2) {
 	            this.selected[1] = arg2;
-	        }
-	        if (this.recordHistory) {
-	            time = new Date();
-	            if (arg1 || arg2) {
-	                this.actionHistory += "[" + time.toJSON() + "] Moved focus absolutely from " + from + " to " + this.selected + ".\n";
-            	} else {
-	                this.actionHistory += "[" + time.toJSON() + "] Read content inside " + from + " via absolute movement.\n";
-	            }
-				time = null;
 	        }
 	        return this.list[this.selected[0]][this.selected[1]];
 			from = null;
@@ -281,18 +222,9 @@ if (_ecma6_) {
 	        }
 	        if (arg2) {
 	            this.selected[1] += arg2;
-   	     }
-    	    if (this.recordHistory) {
-        	    time = new Date();
-            	if (arg1 || arg2) {
-            		this.actionHistory += "[" + time.toJSON() + "] Moved focus relatively from " + from + " to " + this.selected + ".\n";
-	            } else {
-	            	this.actionHistory += "[" + time.toJSON() + "] Read content inside " + from + " via relative movement.\n";
-	            }
-				time = null;
-	        }
+		}
 	        return this.list[this.selected[0]][this.selected[1]];
-			from = null;
+		from = null;
 	    }
 	    this.set = function (arg1, arg2, arg3) {
 	        if (arg1 && arg2 && arg3) {
