@@ -20,6 +20,7 @@ function _import(osrc, mime) {
 			loader.src = src;
 	}
 	document.head.appendChild(loader);
+	return loader;
 }
 function _istyle(osrc) {
 	let src = osrc;
@@ -33,6 +34,7 @@ function _istyle(osrc) {
 			loader.href = src;
 	}
 	document.head.appendChild(loader);
+	return loader;
 }
 	_ecma6_ = true;
 	console.log("ELSL will be loaded in ECMA6 mode.");
@@ -58,6 +60,7 @@ function _istyle(osrc) {
 			loader.src = src;
 	}
 	document.head.appendChild(loader);
+	return loader;
 	src = undefined;
 	loader = undefined;
 }
@@ -73,6 +76,7 @@ function _istyle(osrc) {
 			loader.href = src;
 	}
 	document.head.appendChild(loader);
+	return loader;
 	src = undefined;
 	loader = undefined;
 }
