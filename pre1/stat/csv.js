@@ -1,6 +1,6 @@
 // Updated on 17:21 July 23rd, 2018, from my sololearn codes: https://code.sololearn.com/WgE8SYTs0O2C
 // For older devices
-if (_ecma6) {
+if (_ecma6_) {
 } else {
 	function Csv() {
 	    this.state = function () {
