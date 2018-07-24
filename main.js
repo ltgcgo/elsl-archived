@@ -19,6 +19,9 @@ function _import(osrc, mime) {
 		default :
 			loader.src = src;
 	}
+	loader.onload = function () {
+		console.log("Loaded script from source [" + src + "].");
+	}
 	document.head.appendChild(loader);
 	return loader;
 }
@@ -34,6 +37,9 @@ function _istyle(osrc) {
 			loader.href = src;
 	}
 	document.head.appendChild(loader);
+	loader.onload = function () {
+		console.log("Loaded style sheet from source [" + src + "].");
+	}
 	return loader;
 }
 	_ecma6_ = true;
@@ -60,6 +66,9 @@ function _istyle(osrc) {
 			loader.src = src;
 	}
 	document.head.appendChild(loader);
+	loader.onload = function () {
+		console.log("Loaded script from source [" + src + "].");
+	}
 	return loader;
 	src = undefined;
 	loader = undefined;
@@ -76,6 +85,9 @@ function _istyle(osrc) {
 			loader.href = src;
 	}
 	document.head.appendChild(loader);
+	loader.onload = function () {
+		console.log("Loaded style sheet from source [" + src + "].");
+	}
 	return loader;
 	src = undefined;
 	loader = undefined;
