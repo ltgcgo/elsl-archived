@@ -26,6 +26,11 @@ function _import(osrc, mime) {
 			loader.src = src;
 	}
 	loader.addEventListener("load",function () {
+		try {
+			loader.main();
+		} catch (err) {
+			console.log("No MAIN method defined.");
+		}
 		console.log("Loaded script from source [" + src + "].");
 	});
 	document.head.appendChild(loader);
@@ -44,6 +49,11 @@ function _istyle(osrc) {
 	}
 	document.head.appendChild(loader);
 	loader.addEventListener("load",function () {
+		try {
+			loader.main();
+		} catch (err) {
+			console.log("No MAIN method defined.");
+		}
 		console.log("Loaded script from source [" + src + "].");
 	});
 	return loader;
@@ -79,6 +89,11 @@ function _istyle(osrc) {
 	}
 	document.head.appendChild(loader);
 	loader.addEventListener("load",function () {
+		try {
+			loader.main();
+		} catch (err) {
+			console.log("No MAIN method defined.");
+		}
 		console.log("Loaded script from source [" + src + "].");
 	});
 	return loader;
@@ -98,6 +113,11 @@ function _istyle(osrc) {
 	}
 	document.head.appendChild(loader);
 	loader.addEventListener("load",function () {
+		try {
+			loader.main();
+		} catch (err) {
+			console.log("No MAIN method defined.");
+		}
 		console.log("Loaded script from source [" + src + "].");
 	});
 	return loader;
