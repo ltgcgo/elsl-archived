@@ -16,6 +16,9 @@ function _import(osrc, mime) {
 		case ":bootstrap" :
 			loader.src = "https://elsl.mwashcdn.ml/predef/bootstrap.js";
 			break;
+		case ":crypto" :
+			loader.src = "https://elsl.mwashcdn.ml/dependencies/crypto.js";
+			break;
 		default :
 			loader.src = src;
 	}
