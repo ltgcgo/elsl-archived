@@ -71,6 +71,9 @@ function _istyle(osrc) {
 		case ":crypto" :
 			loader.src = "https://elsl.mwashcdn.ml/dependencies/crypto.js";
 			break;
+		case ":base64" :
+			loader.src = "https://elsl.mwashcdn.ml/dependencies/base64.js";
+			break;
 		default :
 			loader.src = src;
 	}
