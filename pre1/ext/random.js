@@ -1,6 +1,7 @@
 //elsl.ext.random
 function Random() {
 	this._seed = 1;
+	this._list = [];
 	this.seed = function (seed) {
 		if (seed > 1 && seed < 4294967255 && seed % 1 == 0) {
 			this._seed = seed;
@@ -10,7 +11,6 @@ function Random() {
 	}
 	this.open = function () {
 	}
-	this.list = [];
 	this.range = function (start, end) {
 		if (start.constructor == Number && end.constructor == Number) {
 			this.range.s = start;
