@@ -4,5 +4,8 @@ function useCanvas() {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
 	document.body.appendChild(canvas);
-	return canvas.getContext("2d");
+	let output = {};
+	output.pic = canvas.getContext("2d");
+	output.ele = canvas;
+	return output;
 }
