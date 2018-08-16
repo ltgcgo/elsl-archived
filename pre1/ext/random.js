@@ -48,12 +48,15 @@ function Random() {
 		let height = cvs.height;
 		let max = width * height;
 		let count = 0;
+		this.range(0,1000);
+		this.open(true);
+		let gap = this.get() * 3;
 		this.range(0,255);
 		this.open(true);
 		while (count < max) {
 			pic.fillStyle = "rgb(" + this.get() + "," + this.get() + "," + this.get() + ")";
 			pic.fillRect(count % width, Math.floor(count / width), 1, 1);
-			if (count % 180 == 0) {
+			if (count % gap == 0) {
 				this.open();
 			}
 			count ++;
