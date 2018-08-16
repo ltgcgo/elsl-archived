@@ -34,8 +34,8 @@ function Random() {
 		let key2 = this._seed % 100000 / 100;
 		let random = 0.5 * Math.sin(key2 * (this._count + 1) - key1) + 0.5;
 		if (this._list != []) {
-			let output = this._list[Math.floor(random * _list.length)];
-			this._list.splice(Math.floor(random * _list.length), 1);
+			let output = this._list[Math.floor(random * this._list.length)];
+			this._list.splice(Math.floor(random * this._list.length), 1);
 			this._count ++;
 			return output;
 		} else {
