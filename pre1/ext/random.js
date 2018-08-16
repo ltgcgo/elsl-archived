@@ -24,7 +24,7 @@ function Random() {
 	this.get = function () {
 		let key1 = Math.floor(this._seed / 100000);
 		let key2 = this._seed % 100000;
-		let random = Math.floor(0.5 * Math.sin(key2 * (this._count + 1) - key1) + 0.5);
+		let random = 0.5 * Math.sin(key2 * (this._count + 1) - key1) + 0.5;
 		console.log(key1 + " | " + key2 + " | " + random);
 		this._count ++;
 	}
