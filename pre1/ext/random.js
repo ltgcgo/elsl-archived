@@ -48,7 +48,7 @@ function Random() {
 		let height = cvs.height;
 		let max = width * height;
 		let count = 0;
-		this.range(0,1000);
+		this.range(0,85);
 		this.open(true);
 		let gap = this.get() * 3;
 		this.range(0,255);
