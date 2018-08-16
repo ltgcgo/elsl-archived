@@ -11,11 +11,14 @@ function Random() {
 			console.error("[elsl.ext.random] Invalid seed! It should not be greater than 2^32-1, smaller than 1, and must be an integer.");
 		}
 	}
-	this.open = function () {
+	this.open = function (restore) {
 		let count = 0;
 		while (count < this.range.e - this.range.s) {
 			this._list[count] = count + this.range.s;
 			count ++;
+		}
+		if (restore == true) {
+			this._count = 0;
 		}
 	}
 	this.range = function (start, end) {
@@ -37,6 +40,22 @@ function Random() {
 			return output;
 		} else {
 			console.error("[elsl.ext.random] Use .open() to refresh the random list!");
+		}
+	}
+	this.visualize = function (cvs) {
+		let pic = cvs.getContext("2d");
+		let width = cvs.width;
+		let height = cvs.height;
+		let max = width * height;
+		let count = 0;
+		this.range(0,255);
+		this.open(true);
+		while (count < max) {
+			let val = this.get();
+			pic.fillStyle = "rgb(" + val + "," + val + "," + val + ")";
+			pic.fillRect(count % width, Math.floor(count / width), 1, 1);
+			this.open();
+			count ++;
 		}
 	}
 }
