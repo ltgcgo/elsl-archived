@@ -13,7 +13,7 @@ function dictGen (pass) {
 			let odict = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "+", "/"];;
 			let ndict = [];
 			while (now < 64) {
-				Dict = Math.floor((0.5 * Math.sin(key1 * now - key2) + 0.5) * odict.length);
+				Dict = Math.floor((0.5 * Math.sin(key2 * now - key1) + 0.5) * odict.length);
 				ndict[now] = odict[Dict];
 				odict.splice(Dict, 1);
 				now ++;
