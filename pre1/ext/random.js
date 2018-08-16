@@ -51,8 +51,7 @@ function Random() {
 		this.range(0,255);
 		this.open(true);
 		while (count < max) {
-			let val = this.get();
-			pic.fillStyle = "rgb(" + val + "," + val + "," + val + ")";
+			pic.fillStyle = "rgb(" + this.get() + "," + this.get() + "," + this.get() + ")";
 			pic.fillRect(count % width, Math.floor(count / width), 1, 1);
 			this.open();
 			count ++;
