@@ -1,4 +1,5 @@
-//elsl.ext.random
+// @Module : elsl.ext.random
+// @Dependencies : none
 function Random() {
 	this._seed = 1;
 	this._list = [];
@@ -21,7 +22,7 @@ function Random() {
 		}
 	}
 	this.get = function () {
-		let key1 = this._seed / 100000 % 1;
+		let key1 = Math.floor(this._seed / 100000);
 		let key2 = this._seed % 100000;
 		let random = Math.floor(0.5 * Math.sin(key2 * (this._count + 1) - key1) + 0.5);
 		console.log(key1 + " | " + key2);
