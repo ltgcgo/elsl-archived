@@ -2,9 +2,9 @@
 # Introduction
 Rewritten ELSL for further and advanced development.
 
-Get started? Go to <a href="https://github.com/mwashfds/elsl/blob/master/wiki.mediawiki">this page</a>!
+Get started? Go to <a href="https://github.com/webcirque/elsl/blob/master/wiki.mediawiki">this page</a>!
 
-Want to contribute? Click <a href="https://github.com/mwashfds/elsl/tree/master">here</a>!
+Want to contribute? Click <a href="https://github.com/webcirque/elsl/tree/master">here</a>!
 
 Testing ELSL on your PC? <a href="/imple/">Try it here!</a>
 
