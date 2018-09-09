@@ -1,1 +1,1 @@
-{"version":"0.5.0.1","js":["pre1/main.min.js","dependencies/crypto.js","dependencies/base64.js"],"css":["pre1/main.min.css"]}
+{"version":"0.5.0.1","js":["main.min.js","dependencies/crypto.js","dependencies/base64.js"],"css":["pre1/main.min.css"]}
