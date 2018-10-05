@@ -3,6 +3,7 @@ CryptoJS v3.1.2
 https://code.google.com/archive/p/crypto-js/
 (c) 2009-2013 by Jeff Mott. All rights reserved.
 https://code.google.com/archive/p/crypto-js/wikis/License.wiki
+@@ For some reasons, the developer stopped development of CryptoJS.
 */
 var CryptoJS = CryptoJS || function(u, p) {
     var d = {}
