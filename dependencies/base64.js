@@ -13,7 +13,7 @@
 */
 
 function Base64() {
- 
+
 	// private property
 	_keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
   
@@ -30,7 +30,7 @@ function Base64() {
         _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
     }
   }
- 
+ // utf-8 only support mode 0 and 1
 	// public method for encoding
 	this.encode = function (input) {
 		var output = "";
