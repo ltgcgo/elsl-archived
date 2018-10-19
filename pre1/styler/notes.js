@@ -48,4 +48,10 @@ t_rplAll = null
 console.log("Module ELSL Notes loaded.");
 }
 }
+	{
+		let stylesheet = document.createElement("link");
+		stylesheet.href = "https://elsl.pwcq.ml/pre1/styler/notes.min.css";
+		stylesheet.rel = "stylesheet";
+		document.head.appendChild(stylesheet);
+	}
 );
