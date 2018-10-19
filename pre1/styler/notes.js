@@ -1,4 +1,5 @@
-window.addEventListener("load", function () {
+document.addEventListener("readystatechange", function () {
+if (this.readyState.toLowerCase() == "interactive") {
 let t_delete = function(origin, index) {
     let result = "";
     for (let donum = 0; donum < origin.length; donum++) {
@@ -46,3 +47,4 @@ t_delete = null
 t_rplAll = null
 console.log("Module ELSL Notes loaded.");
 });
+}
