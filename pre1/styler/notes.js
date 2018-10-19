@@ -46,5 +46,6 @@ notes = null;
 t_delete = null
 t_rplAll = null
 console.log("Module ELSL Notes loaded.");
-});
 }
+}
+);
