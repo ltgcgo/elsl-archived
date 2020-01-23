@@ -1,7 +1,7 @@
 [Back to Main Site](https://pwcq.ml)
 
 # Introduction
-Rewritten ELSL for further and advanced development.
+WEBSF(**W**ebcirque **E**xtensible **B**ridgable **S**cripting **F**ramework), formerly known as ELSL(**E**xtensible **L**ight **S**cripting **L**ibrary), is a multi-usage JavaScript Framework.
 
 Get started? Go to <a href="https://github.com/webcirque/elsl/blob/master/wiki.mediawiki">this page</a>!
 
