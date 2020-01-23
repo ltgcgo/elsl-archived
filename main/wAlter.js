@@ -1,3 +1,4 @@
+"use strict";
 function wAlter (text, map) {
 	let wtAr = Array.from(text);
 	let wlist = [];
