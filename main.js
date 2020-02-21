@@ -11,16 +11,16 @@ function _import(osrc, mime) {
 	}
 	switch (src) {
 		case ":jquery" :
-			loader.src = "https://elsl.mwashcdn.ml/predef/jquery.js";
+			loader.src = "https://webcirque.github.io/elsl/predef/jquery.js";
 			break;
 		case ":bootstrap" :
-			loader.src = "https://elsl.mwashcdn.ml/predef/bootstrap.js";
+			loader.src = "https://webcirque.github.io/elsl/predef/bootstrap.js";
 			break;
 		case ":crypto" :
-			loader.src = "https://elsl.mwashcdn.ml/dependencies/crypto.js";
+			loader.src = "https://webcirque.github.io/elsl/dependencies/crypto.js";
 			break;
 		case ":base64" :
-			loader.src = "https://elsl.mwashcdn.ml/dependencies/base64.js";
+			loader.src = "https://webcirque.gitgub.io/elsl/dependencies/base64.js";
 			break;
 		default :
 			loader.src = src;
@@ -60,7 +60,7 @@ function _istyle(osrc) {
 }
 	_ecma6_ = true;
 	console.log("ELSL will be loaded in ECMA6 mode.");
-} catch (err) {
+} catch (err) {/*
 	function _import(osrc, mime) {
 	src = osrc;
 	loader = document.createElement("script");
@@ -126,7 +126,7 @@ function _istyle(osrc) {
 }
 	_ecma6_ = false;
 	console.log("ELSL will be loaded in compatible mode.");
-}
+*/}
 
 _import("https://elsl.mwashcdn.ml/pre1/main.min.js");
 _istyle("https://elsl.mwashcdn.ml/pre1/main.min.css");
